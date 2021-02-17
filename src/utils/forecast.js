@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to find forecast data", undefined)
         } else {
             callback(undefined, 
-                body.current.weather_descriptions[0] + '. Temperature is ' + body.current.temperature + ' degrees but feels like ' + body.current.feelslike + ' degrees.'
+                body.current.weather_descriptions[0] + '. Temperature is ' + body.current.temperature + ' degrees but feels like ' + body.current.feelslike + ' degrees. The cloud coverage is ' + body.current.cloudcover + '%.'
             )
         }
     })
